@@ -97,7 +97,7 @@ Based on the proposed hierarchy, we develop Hi-Phy benchmark in Angry Birds. Hi-
 
 Sceenshots of the 65 task templates are shown below.
 
-<img src="tasks/example_tasks/images/1.1.1.png" width="250"/> <img src="tasks/example_tasks/videos/1.1.2.png" width="250"/> <img src="tasks/example_tasks/videos/1.1.3.png" width="250"/> 
+<img src="tasks/example_tasks/images/1.1.1.png" width="250"/> <img src="tasks/example_tasks/images/1.1.2.png" width="250"/> <img src="tasks/example_tasks/images/1.1.3.png" width="250"/> 
 
 
 
