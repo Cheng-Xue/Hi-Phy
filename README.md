@@ -92,10 +92,13 @@ Based on the proposed hierarchy, we develop Hi-Phy benchmark in Angry Birds. Hi-
 | Task             |  Description |
 :-------------------------:|:-----------
 <img src="tasks/example_tasks/videos/1.1.1.gif" width="1000"/> | 1.1: Understanding the instant effect of objects in an enviornment when an agent applys a single force. A force is needed to be applied to destroy the pig.
-<img src="tasks/example_tasks/videos/2.2.1.gif" width="1000"/> | 1.2: Unverstanding the instant effect of objects in an enviornment when an agent applys a multiple force. Multiple forces are needed to be applied to destroy the pig.
-<img src="tasks/example_tasks/videos/3.1.3.gif" width="1000"/> | 2.1: Understanding that objects in the enviornment may roll. The circular object is needed to be rolled on to the pig which causes the pig to be destroyed.
-<img src="tasks/example_tasks/videos/3.4.3.gif" width="1000"/> | 2.2: Understanding that objects in the enviornment may fall. The circular object is needed to be fallen on to the pig which causes the pig to be destroyed.
-
+<img src="tasks/example_tasks/videos/1.2.2.gif" width="1000"/> | 1.2: Unverstanding the instant effect of objects in an enviornment when an agent applys a multiple force. Multiple forces are needed to be applied to destroy the pig.
+<img src="tasks/example_tasks/videos/2.1.4.gif" width="1000"/> | 2.1: Understanding that objects in the enviornment may roll. The circular object is needed to be rolled on to the pig causing the pig to be destroyed.
+<img src="tasks/example_tasks/videos/2.2.1.gif" width="1000"/> | 2.2: Understanding that objects in the enviornment may fall. The circular object is needed to be fallen on to the pig causing the pig to be destroyed.
+<img src="tasks/example_tasks/videos/2.3.1.gif" width="1000"/> | 2.3: Understanding that objects in the enviornment may slide. The square object is needed to be slid to push the pig causing the pig to be destroyed.
+<img src="tasks/example_tasks/videos/2.4.2.gif" width="1000"/> | 2.4: Understanding that objects in the enviornment may bounce. The bird need is needed to be bounced off the platform (dark-brown object) to hit and destroy the pig.
+<img src="tasks/example_tasks/videos/3.1.3.gif" width="1000"/> | 3.1: Understanding relative weight of objects. The small circular block is lighter than the big circular block. Out of the two blocks, the small circular block can only be rolled to reach the pig and destroy.
+<img src="tasks/example_tasks/videos/3.2.3.gif" width="1000"/> | 3.2: Understanding relative height of objects. The square block on top of the taller rectangular block will not fall through the gap due to the height of the reactangular block. Hence the square block on top of the shorter rectangular block needs to be toppled to correctly fall through the gap. 
 
 
 <img src="tasks/example_tasks/videos/3.4.3.gif" width="250"/> <img src="tasks/example_tasks/videos/3.5.5.gif" width="250"/> <img src="tasks/example_tasks/videos/3.6.5.gif" width="250"/> 
