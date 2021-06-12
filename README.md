@@ -110,10 +110,11 @@ We develop a task generator that can generate tasks for the task templates we de
 ## 4. Tasks generated for baseline analysis
 <a name="Tasks-generated-for-baselines"/></a>
 We generated 100 tasks from each of the 65 task templates for the baseline analysis. The generated tasks can be found in ```tasks/generated_tasks.zip```. After extracting this file, the generatd levels can be found following the folder structure, <br>
-&nbsp;&nbsp;&nbsp;&nbsp;-- index of the hierarchy level <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-- index of the capability <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-- index of the template <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-- Index of the task <br>	
+```&nbsp;&nbsp;&nbsp;&nbsp;generated_tasks
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-- index of the hierarchy level <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-- index of the capability <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-- index of the template <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-- Index of the task <br>```	
 
 ## 5. Baseline Agents and the Framework<a name="BAF"></a>
 
