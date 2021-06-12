@@ -29,7 +29,7 @@ develop intelligent agents with advanced, human-like physical reasoning capabili
 #### Table of contents
 1. [Hierarchy](#Hierarchy)
 2. [Hi-Phy in Angry Birds](#Hi-Phy)
-3. [Some paragraph](#paragraph1)
+3. [Task Generator](#Task-generator)
     1. [Sub paragraph](#subparagraph1)
 4. [Another paragraph](#paragraph2)
 ---
@@ -85,6 +85,9 @@ Based on the proposed hierarchy, we develop Hi-Phy benchmark in Angry Birds. Hi-
 <img src="level_variations/examples/videos/3.4.3.gif" width="250"/> <img src="level_variations/examples/videos/3.5.5.gif" width="250"/> <img src="level_variations/examples/videos/3.6.5.gif" width="250"/> 
 <img src="level_variations/examples/videos/3.7.5.gif" width="250"/> <img src="level_variations/examples/videos/3.8.1.gif" width="250"/> <img src="level_variations/examples/videos/3.9.4.gif" width="250"/> 
 
-## 3. level generator - how code works
+## 3. Task generator
+<a name="Task-generator"/></a>
+We cre
+
 ## 4. levels created for baseline analysis - dataset structure , different capability
 ## 5. baseline agents - how to run baseline agents - science birds repo.
