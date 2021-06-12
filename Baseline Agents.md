@@ -88,17 +88,17 @@ The ./Agents folder contains all the relevant source code of our agents. Below i
 simple description. Detailed documentation in progress):
 
 1. ```Client```:
-    1. ```agent_client.py```: include all communication protocols.
-2. ```final_run```: place to store tensor board results.
+    1. ```agent_client.py```: Includes all communication protocols.
+2. ```final_run```: Place to store tensor board results.
 3. ```HeuristicAgents```
-    1. ```datalab_037_v4_java12.jar```: state-of-the-art java agent for Angry Birds.
-    2. ```eaglewings_037_v3_java12.jar```: state-of-the-art java agent for Angry Birds.
+    1. ```datalab_037_v4_java12.jar```: State-of-the-art java agent for Angry Birds.
+    2. ```eaglewings_037_v3_java12.jar```: State-of-the-art java agent for Angry Birds.
     3. ```PigShooter.py```: Python agent that shoots at the pigs only.
     4. ```RandomAgent.py```: Random agent that choose to shoot from $x \in (-100,-10)$ and $ y \in (-100,100)$.
     5. ```HeuristicAgentThread.py```: A thread wrapper to run multi-instances of heuristic agents.
 4. ```LearningAgents```
-    1. ````RLNetwork``: folder includes all DQN structures that can be used as an input to ```DQNDiscreteAgent.py```.
-    2. ```saved_model```: place to save trained models.
+    1. ```RLNetwork```: Folder includes all DQN structures that can be used as an input to ```DQNDiscreteAgent.py```.
+    2. ```saved_model```: Place to save trained models.
     3. ```LearningAgent.py```: Inherited from SBAgent class, a base class to implement learning agents.
     4. ```DQNDiscreteAgent.py```: Inherited from LearningAgent, a DQN agent that has discrete action space.
     5. ```LearningAgentThread.py```: A thread wrapper to run multi-instances of learning agents.
