@@ -50,7 +50,7 @@ develop intelligent agents with advanced, human-like physical reasoning capabili
 <a name="Hierarchy"/></a>
 Humans and AI approaches learn much better when examples are presented in a meaningful order with increasing complexity
 than when examples are presented randomly. We thereby propose a hierarchy for physical reasoning that enables an agent
-to start with increasing complexity to facility training and evaluating agents to work in the real physical world.
+to start with increasing complexity to facilitate training and evaluating agents to work in the real physical world.
 
 Our hierarchy consists three levels and fifteen capabilities:
 
