@@ -36,7 +36,7 @@ Before running agents, please:
        ./TestPythonHeuristicAgent.sh PigShooter
        ```
 
-### How to run DQN <a name="RLA"></a>
+### How to run DQN Baseline<a name="RLA"></a>
 
 1. Go to Agents/
 2. In terminal, after grant execution permission, train the agent for within capability training
@@ -68,18 +68,19 @@ We provide a gym-like environment. For a simple demo, which can be found at ```d
    import SBEnvironmentWrapper
    
    env = SBEnvironmentWrapper(reward_type="score", speed=50)  # to use score reward and 50 times faster game play
-   level_list = [1, 2, 3]  # level list for the agent to play dummy_agent = SBAgent(env=env, level_list=level_list)  #
-   initialise agent dummy_agent.state_representation_type = 'image' # use 'symbolic' to use symbolic representation as state and run with headless mode env.make(agent=dummy_agent, start_level=dummy_agent.level_list[0],
+   level_list = [1, 2, 3]  # level list for the agent to play 
+   dummy_agent = SBAgent(env=env, level_list=level_list)  #initialise agent 
+   dummy_agent.state_representation_type = 'image' # use 'symbolic' to use symbolic representation as state and run with headless mode env.make(agent=dummy_agent, start_level=dummy_agent.level_list[0],
    state_representation_type = dummy_agent.state_representation_type)  # initialise the environment
    
    s, r, is_done, info = env.reset()  # get ready for running for level_idx in level_list:
    is_done = False while not is_done:
    s, r, is_done, info = env.step([-100, -100])  # agent always shoots at -100,100 as relative to the slingshot
-
-    env.current_level = level_idx+1  # update the level list once finished the level
-    if env.current_level > level_list[-1]: # end the game when all game levels in the level list are played
-        break
-    s, r, is_done, info = env.reload_current_level() #go to the next level
+   
+   env.current_level = level_idx+1  # update the level list once finished the level
+   if env.current_level > level_list[-1]: # end the game when all game levels in the level list are played
+     break
+   s, r, is_done, info = env.reload_current_level() #go to the next level
 ```
     
 ### Outline of the Agent Code <a name="Code"></a>
@@ -94,7 +95,7 @@ simple description. Detailed documentation in progress):
     1. ```datalab_037_v4_java12.jar```: State-of-the-art java agent for Angry Birds.
     2. ```eaglewings_037_v3_java12.jar```: State-of-the-art java agent for Angry Birds.
     3. ```PigShooter.py```: Python agent that shoots at the pigs only.
-    4. ```RandomAgent.py```: Random agent that choose to shoot from $x \in (-100,-10)$ and $ y \in (-100,100)$.
+    4. ```RandomAgent.py```: Random agent that choose to shoot from $x \in (-100,-10)$ and $y \in (-100,100)$.
     5. ```HeuristicAgentThread.py```: A thread wrapper to run multi-instances of heuristic agents.
 4. ```LearningAgents```
     1. ```RLNetwork```: Folder includes all DQN structures that can be used as an input to ```DQNDiscreteAgent.py```.
@@ -134,18 +135,13 @@ simple description. Detailed documentation in progress):
 ### The Game Environment<a name="Env"></a>
 
 1. The coordination system
-    - in the python naive agent and the game playing interface, the game objects are represented in a Cartesian
-      coordinate system with the origin point to be up-left corner. X coordinate increases along the right direction and
-      Y coordinate increases along the downwards direction.
     - in the science birds game, the origin point (0,0) is the bottom-left corner, and the Y coordinate increases along
       the upwards direction, otherwise the same as above.
-    - this is to preserve compatibility with the existing game agents based on the Chrome game. We plan to change the
-      coordinate system of ScienceBirds to match the default coordinates (origin at top left).
 
 ### Symbolic Representation Data Structure<a name="SymbolicRepresentation"></a>
 
-1. Symbolic Representation data of game objects is stored in a Json object. The json object describs an array where each element
-   describes a game object. Game object categories and their properties are described below:
+1. Symbolic Representation data of game objects is stored in a Json object. The json object describes an array where each element
+   describes a game object. Game object categories, and their properties are described below:
     - Ground: the lowest unbreakable flat support surface
         - property: id = 'object [i]'
         - property: type = 'Ground'
@@ -396,7 +392,7 @@ simple description. Detailed documentation in progress):
 		</tr>
 		<tr>
 			<td>61</td>
-			<td>Get Ground Truth With Screenshot</td>
+			<td>Get Symbolic Representation With Screenshot</td>
 			<td>[61]</td>
 			<td>Symbolic Representation and corresponding screenshot</td>
 			<td>[symbolic representation byte array length][Symbolic Representation bytes][image width][image height][image bytes]<br/>
@@ -406,21 +402,21 @@ simple description. Detailed documentation in progress):
 		</tr>
 		<tr>
 			<td>62</td>
-			<td>Get Ground Truth Without Screenshot</td>
+			<td>Get Symbolic Representation Without Screenshot</td>
 			<td>[62]</td>
 			<td>Symbolic Representation</td>
 			<td>[symbolic representation byte array length][Symbolic Representation bytes]</td>
 		</tr>
 		<tr>
 			<td>63</td>
-			<td>Get Noisy Ground Truth With Screenshot</td>
+			<td>Get Noisy Symbolic Representation With Screenshot</td>
 			<td>[63]</td>
 			<td>noisy Symbolic Representation and corresponding screenshot</td>
 			<td>[symbolic representation byte array length][Symbolic Representation bytes][image width][image height][image bytes]</td>
 		</tr>
 		<tr>
 			<td>64</td>
-			<td>Get Noisy Ground Truth Without Screenshot</td>
+			<td>Get Noisy Symbolic Representation Without Screenshot</td>
 			<td>[64]</td>
 			<td>noisy Symbolic Representation</td>
 			<td>[symbolic representation byte array length][Symbolic Representation bytes]</td></tr>
