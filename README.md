@@ -1,6 +1,6 @@
-<p align="center">
-*Hi-Phy: A Benchmark for Hierarchical Physical Reasoning*
 
+# Hi-Phy: A Benchmark for Hierarchical Physical Reasoning*
+<p align="center">
 Cheng Xue*, Vimukthini Pinto*, Chathura Gamage*, Peng Zhang, Jochen Renz<br>
 School of Computing<br>
 The Australian National University<br>
