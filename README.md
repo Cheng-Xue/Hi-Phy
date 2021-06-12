@@ -30,8 +30,7 @@ develop intelligent agents with advanced, human-like physical reasoning capabili
 1. [Hierarchy](#Hierarchy)
 2. [Hi-Phy in Angry Birds](#Hi-Phy)
 3. [Task Generator](#Task-generator)
-    1. [Sub paragraph](#subparagraph1)
-4. [Another paragraph](#paragraph2)
+4. [Tasks generted for the baseline analysis](#Tasks-generated-for-baselines)
 ---
 
 
@@ -97,5 +96,8 @@ We develop a task generator that can generate tasks for the task templates we de
      ```
     4. Generated tasks will be available in the ```output```
 
-## 4. levels created for baseline analysis - dataset structure , different capability
+## 4. Tasks created for baseline analysis
+<a name="Tasks-generated-for-baselines"/></a>
+
+
 ## 5. baseline agents - how to run baseline agents - science birds repo.
