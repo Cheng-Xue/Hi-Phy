@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-16"?>
+<Level width="2">
+  <Camera x="0" y="-1" minWidth="25" maxWidth="35" />
+  <Score highScore="0" />
+  <Birds>
+    <Bird type="BirdRed"/>
+    <Bird type="BirdRed"/>
+  </Birds>
+  <Slingshot x="-12.0" y="-2.5" />
+  <GameObjects>
+    <Pig type="BasicSmall" material="" x="3.8975" y="0.8821" rotation="1.0983" />
+    <Block type="RectBig" material="stone" x="2.476" y="1.448" rotation="90.4896" />
+    <Block type="SquareHole" material="wood" x="2.4675" y="0.1021" rotation="0.1881" />
+    <Block type="SquareHole" material="stone" x="4.282" y="2.9354" rotation="0.8028" />
+    <Block type="SquareHole" material="ice" x="2.4475" y="4.5" rotation="0.0" />
+    <Platform type="Platform" material="" x="1.9875" y="-1.6522" rotation="0.0" scaleX="1.0" scaleY="4.223" />
+    <Platform type="Platform" material="" x="2.9575" y="-1.6417" rotation="0.0" scaleX="1.0" scaleY="4.1934" />
+    <Platform type="Platform" material="" x="1.9875" y="2.9646" rotation="0.0" scaleX="1.0" scaleY="3.3272" />
+    <Platform type="Platform" material="" x="2.9575" y="2.9587" rotation="0.0" scaleX="1.0" scaleY="3.3138" />
+    <Platform type="Platform" material="" x="4.1675" y="0.5408" rotation="0.0" scaleX="3.0506" scaleY="0.322" />
+    <Platform type="Platform" material="" x="4.8675" y="1.4968" rotation="0.0" scaleX="1.0" scaleY="3.2534" />
+    <Platform type="Platform" material="" x="3.9775" y="2.2078" rotation="0.0" scaleX="3.64" scaleY="1.0" />
+    <Platform type="Platform" material="" x="3.5218" y="-1.2742" rotation="0.0" scaleX="1.0178" scaleY="5.3498" />
+    <Platform type="Platform" material="" x="2.7515" y="-2.6692" rotation="0.0" scaleX="3.3807" scaleY="1.0" />
+    <Platform type="Platform" material="" x="2.4885" y="3.7778" rotation="0.0" scaleX="2.5612" scaleY="1.0" />
+    <Block type="RectTiny" material="ice" x="-8.9889" y="-3.39" rotation="0" />
+    <Block type="SquareSmall" material="ice" x="-6.3249" y="-3.285" rotation="0" />
+    <Block type="CircleSmall" material="wood" x="-3.6556" y="-3.275" rotation="0" />
+  </GameObjects>
+</Level>
