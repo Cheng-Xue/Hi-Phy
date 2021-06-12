@@ -14,7 +14,7 @@ class SBAgent:
         self.id = id
         self.myid = 0
         self.level_list = level_list
-        self.level_selection_function = None # TODO: level selection function can be an input of the init function
+        self.level_selection_function = None
         self.total_score_record = dict(
             [(i, {'total_score': 0, 'did_win': False, 'attempts': 0}) for i in level_list])
 
