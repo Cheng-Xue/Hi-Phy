@@ -87,7 +87,15 @@ Based on the proposed hierarchy, we develop Hi-Phy benchmark in Angry Birds. Hi-
 
 ## 3. Task generator
 <a name="Task-generator"/></a>
-We develop a task generator that can generate tasks for task templates we designed. 
+We develop a task generator that can generate tasks for task templates we designed. The designed task templates can be found in 
+To run the task generator:
+    1. Go to ```tasks/task_generator```
+    2. Copy the task templates that you want to generate tasks into the ```task_generator\input``` folder (the level templates can be found in ```tasks/task_templates``` folder)
+    3. Run the tak generator
+     ```
+        python tasks\generte_tasks.py
+     ```
+    4. Generated tasks will be available in ```tasks/task_generator/output``` folder
 
 ## 4. levels created for baseline analysis - dataset structure , different capability
 ## 5. baseline agents - how to run baseline agents - science birds repo.
