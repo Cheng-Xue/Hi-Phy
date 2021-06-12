@@ -87,7 +87,7 @@ Please refer to the paper for more details how and why we attributed the capabil
 
 ## 2. Hi-Phy in Angry Birds
 <a name="Hi-Phy"/></a>
-Based on the proposed hierarchy, we develop Hi-Phy benchmark in Angry Birds. Hi-Phy contains tasks from 65 task templates belonging to the fifteen capabilities. Shown below are fifteen example tasks in Hi-Phy representing the fifteen capabilities.
+Based on the proposed hierarchy, we develop Hi-Phy benchmark in Angry Birds. Hi-Phy contains tasks from 65 task templates belonging to the fifteen capabilities. Shown below are fifteen example tasks in Hi-Phy representing the fifteen capabilities and the solutions for those tasks.
 
 <img src="tasks/example_tasks/videos/1.1.1.gif" width="250"/> <img src="tasks/example_tasks/videos/1.2.2.gif" width="250"/> <img src="tasks/example_tasks/videos/2.1.4.gif" width="250"/> 
 <img src="tasks/example_tasks/videos/2.2.1.gif" width="250"/> <img src="tasks/example_tasks/videos/2.3.1.gif" width="250"/> <img src="tasks/example_tasks/videos/2.4.2.gif" width="250"/> 
@@ -98,8 +98,27 @@ Based on the proposed hierarchy, we develop Hi-Phy benchmark in Angry Birds. Hi-
 Sceenshots of the 65 task templates are shown below.
 
 <img src="tasks/example_tasks/images/1.1.1.png" width="250"/> <img src="tasks/example_tasks/images/1.1.2.png" width="250"/> <img src="tasks/example_tasks/images/1.1.3.png" width="250"/> 
-
-
+<img src="tasks/example_tasks/images/1.2.1.png" width="250"/> <img src="tasks/example_tasks/images/1.2.2.png" width="250"/> <img src="tasks/example_tasks/images/1.2.3.png" width="250"/> 
+<img src="tasks/example_tasks/images/1.2.4.png" width="250"/> <img src="tasks/example_tasks/images/1.2.5.png" width="250"/> <img src="tasks/example_tasks/images/2.1.1.png" width="250"/> 
+<img src="tasks/example_tasks/images/2.1.2.png" width="250"/> <img src="tasks/example_tasks/images/2.1.3.png" width="250"/> <img src="tasks/example_tasks/images/2.1.4.png" width="250"/> 
+<img src="tasks/example_tasks/images/2.1.5.png" width="250"/> <img src="tasks/example_tasks/images/2.2.1.png" width="250"/> <img src="tasks/example_tasks/images/2.2.2.png" width="250"/> 
+<img src="tasks/example_tasks/images/2.2.3.png" width="250"/> <img src="tasks/example_tasks/images/2.2.4.png" width="250"/> <img src="tasks/example_tasks/images/2.2.5.png" width="250"/> 
+<img src="tasks/example_tasks/images/2.3.1.png" width="250"/> <img src="tasks/example_tasks/images/2.3.2.png" width="250"/> <img src="tasks/example_tasks/images/2.3.3.png" width="250"/> 
+<img src="tasks/example_tasks/images/2.3.4.png" width="250"/> <img src="tasks/example_tasks/images/2.4.1.png" width="250"/> <img src="tasks/example_tasks/images/2.4.2.png" width="250"/> 
+<img src="tasks/example_tasks/images/2.4.3.png" width="250"/> <img src="tasks/example_tasks/images/3.1.1.png" width="250"/> <img src="tasks/example_tasks/images/3.1.2.png" width="250"/> 
+<img src="tasks/example_tasks/images/3.1.3.png" width="250"/> <img src="tasks/example_tasks/images/3.1.4.png" width="250"/> <img src="tasks/example_tasks/images/3.1.5.png" width="250"/> 
+<img src="tasks/example_tasks/images/3.2.1.png" width="250"/> <img src="tasks/example_tasks/images/3.2.2.png" width="250"/> <img src="tasks/example_tasks/images/3.2.3.png" width="250"/> 
+<img src="tasks/example_tasks/images/3.2.4.png" width="250"/> <img src="tasks/example_tasks/images/3.3.1.png" width="250"/> <img src="tasks/example_tasks/images/3.3.2.png" width="250"/> 
+<img src="tasks/example_tasks/images/3.3.3.png" width="250"/> <img src="tasks/example_tasks/images/3.3.4.png" width="250"/> <img src="tasks/example_tasks/images/3.4.1.png" width="250"/> 
+<img src="tasks/example_tasks/images/3.4.2.png" width="250"/> <img src="tasks/example_tasks/images/3.4.3.png" width="250"/> <img src="tasks/example_tasks/images/3.4.4.png" width="250"/> 
+<img src="tasks/example_tasks/images/3.5.1.png" width="250"/> <img src="tasks/example_tasks/images/3.5.2.png" width="250"/> <img src="tasks/example_tasks/images/3.5.3.png" width="250"/> 
+<img src="tasks/example_tasks/images/3.5.4.png" width="250"/> <img src="tasks/example_tasks/images/3.5.5.png" width="250"/> <img src="tasks/example_tasks/images/3.6.1.png" width="250"/> 
+<img src="tasks/example_tasks/images/3.6.2.png" width="250"/> <img src="tasks/example_tasks/images/3.6.3.png" width="250"/> <img src="tasks/example_tasks/images/3.6.4.png" width="250"/> 
+<img src="tasks/example_tasks/images/3.6.5.png" width="250"/> <img src="tasks/example_tasks/images/3.7.1.png" width="250"/> <img src="tasks/example_tasks/images/3.7.2.png" width="250"/> 
+<img src="tasks/example_tasks/images/3.7.3.png" width="250"/> <img src="tasks/example_tasks/images/3.7.4.png" width="250"/> <img src="tasks/example_tasks/images/3.7.5.png" width="250"/> 
+<img src="tasks/example_tasks/images/3.8.1.png" width="250"/> <img src="tasks/example_tasks/images/3.8.2.png" width="250"/> <img src="tasks/example_tasks/images/3.9.1.png" width="250"/> 
+<img src="tasks/example_tasks/images/3.9.2.png" width="250"/> <img src="tasks/example_tasks/images/3.9.3.png" width="250"/> <img src="tasks/example_tasks/images/3.9.4.png" width="250"/> 
+<img src="tasks/example_tasks/images/3.9.5.png" width="250"/> <img src="tasks/example_tasks/images/3.9.6.png" width="250"/>
 
 ## 3. Task generator
 <a name="Task-generator"/></a>
