@@ -62,8 +62,8 @@ Before running agents, please:
 
 We provide a gym-like environment. For a simple demo, which can be found at ```demo.py```
 
-'''python from SBAgent import SBAgent from SBEnvironment.SBEnvironmentWrapper import SBEnvironmentWrapper
-
+'''python 
+from SBAgent import SBAgent from SBEnvironment.SBEnvironmentWrapper import SBEnvironmentWrapper
 # for using reward as score and 50 times faster game play
 
 env = SBEnvironmentWrapper(reward_type="score", speed=50)
@@ -80,7 +80,6 @@ s, r, is_done, info = env.step([-100, -100])  # agent always shoots at -100,100 
     if env.current_level > level_list[-1]: # end the game when all game levels in the level list are played
         break
     s, r, is_done, info = env.reload_current_level() #go to the next level
-
 '''
 
 ### Outline of the Agent Code <a name="Code"></a>
@@ -143,7 +142,7 @@ simple description. Detailed documentation in progress):
     - this is to preserve compatibility with the existing game agents based on the Chrome game. We plan to change the
       coordinate system of ScienceBirds to match the default coordinates (origin at top left).
 
-#### Symbolic Representation Data Structure<a name="SymbolicRepresentation"></a>
+### Symbolic Representation Data Structure<a name="SymbolicRepresentation"></a>
 
 1. Symbolic Representation data of game objects is stored in a Json object. The json object describs an array where each element
    describes a game object. Game object categories and their properties are described below:
