@@ -79,19 +79,6 @@ Please refer to the paper for more details how and why we attributed the capabil
 <a name="Hi-Phy"/></a>
 Based on the proposed hierarchy, we develop our H
 
-<p>
-    <img src="level_variations/examples/videos/1.1.1.gif" width="300"/> 
-    <em>1.1.1</em>
-</p>
-<p>
-    <img src="level_variations/examples/videos/1.1.1.gif" width="300"/> 
-    <em>1.1.1</em>
-</p>
-<p>
-    <img src="level_variations/examples/videos/1.1.1.gif" width="300"/> 
-    <em>1.1.1</em>
-</p>
-
 <img src="level_variations/examples/videos/1.1.1.gif" width="300"/> <img src="level_variations/examples/videos/1.1.1.gif" width="300"/> <img src="level_variations/examples/videos/1.1.1.gif" width="300"/> 
 
 
