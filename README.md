@@ -87,7 +87,7 @@ Based on the proposed hierarchy, we develop Hi-Phy benchmark in Angry Birds. Hi-
 
 ## 3. Task generator
 <a name="Task-generator"/></a>
-We cre
+We develop a task generator that can generate tasks for task templates we designed. 
 
 ## 4. levels created for baseline analysis - dataset structure , different capability
 ## 5. baseline agents - how to run baseline agents - science birds repo.
