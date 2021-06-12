@@ -265,6 +265,7 @@ simple description. Detailed documentation in progress):
 1. The coordination system
     - in the science birds game, the origin point (0,0) is the bottom-left corner, and the Y coordinate increases along
       the upwards direction, otherwise the same as above.
+    - Coordinates ranging from (0,0) to (640,480).
 
 ### 6.2 Symbolic Representation Data Structure<a name="SymbolicRepresentation"></a>
 
