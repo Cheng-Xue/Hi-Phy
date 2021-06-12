@@ -59,7 +59,7 @@ agent's action.**
 
     Level 1 capabilities:
     1.1: Understanding the instant effect of objects in an environment when an agent applys a single force.
-    1.2: Unverstanding the instant effect of objects in an environment when an agent applys a multiple force.
+    1.2: Understanding the instant effect of objects in an environment when an agent applys a multiple force.
 
 **Level 2: Understanding objects movement in the environment after a force is applied.**
 
@@ -92,7 +92,7 @@ Based on the proposed hierarchy, we develop Hi-Phy benchmark in Angry Birds. Hi-
 | Task             |  Description |
 :-------------------------:|:-----------
 <img src="tasks/example_tasks/videos/1.1.1.gif" width="1000"/> | 1.1: Understanding the instant effect of objects in an environment when an agent applys a single force. A force is needed to be applied to destroy the pig.
-<img src="tasks/example_tasks/videos/1.2.2.gif" width="1000"/> | 1.2: Unverstanding the instant effect of objects in an environment when an agent applys a multiple force. Multiple forces are needed to be applied to destroy the pig.
+<img src="tasks/example_tasks/videos/1.2.2.gif" width="1000"/> | 1.2: Understanding the instant effect of objects in an environment when an agent applys a multiple force. Multiple forces are needed to be applied to destroy the pig.
 <img src="tasks/example_tasks/videos/2.1.4.gif" width="1000"/> | 2.1: Understanding that objects in the environment may roll. The circular object is needed to be rolled on to the pig causing the pig to be destroyed.
 <img src="tasks/example_tasks/videos/2.2.1.gif" width="1000"/> | 2.2: Understanding that objects in the environment may fall. The circular object is needed to be fallen on to the pig causing the pig to be destroyed.
 <img src="tasks/example_tasks/videos/2.3.1.gif" width="1000"/> | 2.3: Understanding that objects in the environment may slide. The square object is needed to be slid to push the pig causing the pig to be destroyed.
