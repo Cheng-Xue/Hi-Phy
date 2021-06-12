@@ -78,8 +78,6 @@ Please refer to the paper for more details how and why we attributed the capabil
 ## 2. Hi-Phy in Angry Birds
 <a name="Hi-Phy"/></a>
 Based on the proposed hierarchy, we develop our H
-
-:-------------------------:|:-------------------------:|:-------------------------:
 <img src="level_variations/examples/videos/1.1.1.gif" width="300"/> <img src="level_variations/examples/videos/1.1.1.gif" width="300"/> <img src="level_variations/examples/videos/1.1.1.gif" width="300"/> 
 
 
