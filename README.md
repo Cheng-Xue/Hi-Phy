@@ -88,9 +88,9 @@ Based on the proposed hierarchy, we develop Hi-Phy benchmark in Angry Birds. Hi-
 ## 3. Task generator
 <a name="Task-generator"/></a>
 We develop a task generator that can generate tasks for the task templates we designed.<br>
-To run the task generator:<br>
+1. To run the task generator:<br>
     1. Go to ```tasks/task_generator``` <br>
-    2. Copy the task templates that you want to generate tasks into the ```task_generator\input``` folder (the level templates can be found in ```tasks/task_templates``` folder) <br>
+    2. Copy the task templates that you want to generate tasks into the ```tasks\task_generator\input``` folder (the level templates can be found in ```tasks/task_templates``` folder) <br>
     3. Run the tak generator<br>
      ```
         python tasks\generte_tasks.py
