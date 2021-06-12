@@ -2,7 +2,7 @@ import random
 
 import numpy as np
 from SBAgent import SBAgent
-from SBEnviornment.SBEnvironmentWrapper import SBEnvironmentWrapper
+from SBEnvironment.SBEnvironmentWrapper import SBEnvironmentWrapper
 from StateReader.SymbolicStateReader import SymbolicStateReader
 from StateReader.game_object import GameObjectType
 from Utils.LevelSelection import LevelSelectionSchema
