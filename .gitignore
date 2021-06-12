@@ -18,3 +18,9 @@ Agents/LearningAgents/__pycache__/
 buildgame/Linux/
 
 level_variations/generated_levels/fourth generation/
+
+Agents/Client/__pycache__/
+
+Agents/SBEnviornment/__pycache__/
+
+Agents/SBEnvironment/__pycache__/

@@ -9,7 +9,7 @@ from Utils.LevelSelection import LevelSelectionSchema
 from HeuristicAgents.HeuristicAgentThread import MultiThreadTrajCollection
 from HeuristicAgents.PigShooter import PigShooter
 from HeuristicAgents.RandomAgent import RandomAgent
-from SBEnviornment.SBEnvironmentWrapper import SBEnvironmentWrapper
+from SBEnvironment.SBEnvironmentWrapper import SBEnvironmentWrapper
 from Utils.Config import config
 from Utils.Parameters import Parameters
 

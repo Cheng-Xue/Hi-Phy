@@ -10,7 +10,6 @@ import sys
 sys.path.append('..')
 sys.path.append('./src')
 import numpy as np
-# import os
 from StateReader.game_object import GameObject, GameObjectType
 from StateReader.cv_utils import Rectangle
 from Utils.NDSparseMatrix import NDSparseMatrix
