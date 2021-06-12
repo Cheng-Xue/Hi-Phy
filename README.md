@@ -91,7 +91,7 @@ Based on the proposed hierarchy, we develop Hi-Phy benchmark in Angry Birds. Hi-
 
 | Task             |  Description |
 :-------------------------:|:-----------
-<img src="tasks/example_tasks/videos/1.1.1.gif" width="500"/>  |  1.1: Understanding the instant effect of objects in an enviornment when an agent applys a single force. Agent needs to understand that applying a force to the pig (green-coloured object) destroys the pig and solves the task.
+<img src="tasks/example_tasks/videos/1.1.1.gif" width="1000"/>  |  1.1: Understanding the instant effect of objects in an enviornment when an agent applys a single force. Agent needs to understand that applying a force to the pig (green-coloured object) destroys the pig and solves the task.
 
 <img src="tasks/example_tasks/videos/1.1.1.gif" width="250"/> <img src="tasks/example_tasks/videos/1.2.2.gif" width="250"/> <img src="tasks/example_tasks/videos/2.1.4.gif" width="250"/> 
 <img src="tasks/example_tasks/videos/2.2.1.gif" width="250"/> <img src="tasks/example_tasks/videos/2.3.1.gif" width="250"/> <img src="tasks/example_tasks/videos/2.4.2.gif" width="250"/> 
