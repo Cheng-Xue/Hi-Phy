@@ -1,5 +1,5 @@
 
-# Hi-Phy: A Benchmark for Hierarchical Physical Reasoning*
+# Hi-Phy: A Benchmark for Hierarchical Physical Reasoning
 <p align="center">
 Cheng Xue*, Vimukthini Pinto*, Chathura Gamage*, Peng Zhang, Jochen Renz<br>
 School of Computing<br>
@@ -23,7 +23,7 @@ generalization ability, still struggle to learn the underlying physical reasonin
 current state-of-the-art heuristic agents and humans. We believe that this benchmark will encourage researchers to
 develop intelligent agents with advanced, human-like physical reasoning capabilities.
 
-* equal contribution
+\* equal contribution
 
 ---
 #### Table of contents
