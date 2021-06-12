@@ -62,8 +62,9 @@ Before running agents, please:
 
 We provide a gym-like environment. For a simple demo, which can be found at ```demo.py```
 
-'''python
+   ```python
    from SBAgent import SBAgent from SBEnvironment.SBEnvironmentWrapper import SBEnvironmentWrapper
+   
    env = SBEnvironmentWrapper(reward_type="score", speed=50)  # to use score reward and 50 times faster game play
    level_list = [1, 2, 3]  # level list for the agent to play dummy_agent = SBAgent(env=env, level_list=level_list)  #
    initialise agent dummy_agent.state_representation_type = 'image' # use 'symbolic' to use symbolic representation as
@@ -77,9 +78,8 @@ We provide a gym-like environment. For a simple demo, which can be found at ```d
     env.current_level = level_idx+1  # update the level list once finished the level
     if env.current_level > level_list[-1]: # end the game when all game levels in the level list are played
         break
-    s, r, is_done, info = env.reload_current_level() #go to the next level
-'''
-
+    s, r, is_done, info = env.reload_current_level() #go to the next level```
+    
 ### Outline of the Agent Code <a name="Code"></a>
 
 The ./Agents folder contains all the relevant source code of our agents. Below is the outline of the code (this is a
