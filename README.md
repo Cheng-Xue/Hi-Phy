@@ -90,8 +90,8 @@ Please refer to the paper for more details how and why we attributed the capabil
 Based on the proposed hierarchy, we develop Hi-Phy benchmark in Angry Birds. Hi-Phy contains tasks from 65 task templates belonging to the fifteen capabilities. Shown below are fifteen example tasks in Hi-Phy representing the fifteen capabilities and the solutions for those tasks.
 
 | Task             |  Description |
-:-------------------------:|:-------------------------:
-<img src="tasks/example_tasks/videos/1.1.1.gif" width="400"/>  |  1.1: Understanding the instant effect of objects in an enviornment when an agent applys a single force. Agent needs to understand that applying a force to the pig (green-coloured object) destroys the pig and solves the task.
+:-------------------------:|:-----------
+<img src="tasks/example_tasks/videos/1.1.1.gif" width="500"/>  |  1.1: Understanding the instant effect of objects in an enviornment when an agent applys a single force. Agent needs to understand that applying a force to the pig (green-coloured object) destroys the pig and solves the task.
 
 <img src="tasks/example_tasks/videos/1.1.1.gif" width="250"/> <img src="tasks/example_tasks/videos/1.2.2.gif" width="250"/> <img src="tasks/example_tasks/videos/2.1.4.gif" width="250"/> 
 <img src="tasks/example_tasks/videos/2.2.1.gif" width="250"/> <img src="tasks/example_tasks/videos/2.3.1.gif" width="250"/> <img src="tasks/example_tasks/videos/2.4.2.gif" width="250"/> 
