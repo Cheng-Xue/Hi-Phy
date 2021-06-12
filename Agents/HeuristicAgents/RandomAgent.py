@@ -1,11 +1,7 @@
 import random
-import sys
 
-import numpy as np
-
-from Utils.LevelSelection import LevelSelectionSchema
 from SBAgent import SBAgent
-from SBEnviornment.SBEnvironmentWrapper import SBEnvironmentWrapper
+from SBEnvironment.SBEnvironmentWrapper import SBEnvironmentWrapper
 
 
 class RandomAgent(SBAgent):
@@ -17,8 +13,6 @@ class RandomAgent(SBAgent):
         self.env = env  # used to sample random action
         self.level_selection_function = level_selection_function
         self.state_representation_type = 'symbolic'
-        self.episode_rewards = {}
-        self.did_win = {}
 
     def select_level(self):
         # you can choose to implement this by yourself, or just get it from the LevelSelectionSchema
@@ -26,7 +20,7 @@ class RandomAgent(SBAgent):
         return idx
 
     def select_action(self, state, mode=None):
-        shot = [random.randint(-200,-10) ,random.randint(-200,200) ,random.randint(50,80)]
+        shot = [random.randint(-200, -10), random.randint(-200, 200), random.randint(50, 80)]
         return shot
 
     def update_episode_rewards(self, current_level, eps_reward):

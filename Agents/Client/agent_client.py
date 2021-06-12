@@ -84,7 +84,6 @@ class AgentClient:
         self.server_host = host
         self.playing_mode = playing_mode
         self.server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        # self.server_socket.settimeout(100)
         self._buffer = bytearray()
 
         self._extra_args = kwargs
@@ -98,6 +97,7 @@ class AgentClient:
     def _read_raw_from_buff(self, size):
         """Read a specific number of bytes from server_socket"""
         self._logger.debug("Reading %s bytes from server", size)
+        self.server_socket.settimeout(300)
         while len(self._buffer) < size:
             new_bytes = self.server_socket.recv(size - len(self._buffer))
             self._buffer.extend(new_bytes)

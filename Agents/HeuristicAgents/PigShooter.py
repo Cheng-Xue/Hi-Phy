@@ -1,23 +1,23 @@
 import random
 
 import numpy as np
-from Utils.LevelSelection import LevelSelectionSchema
 from SBAgent import SBAgent
-from SBEnviornment.SBEnvironmentWrapper import SBEnvironmentWrapper
+from SBEnvironment.SBEnvironmentWrapper import SBEnvironmentWrapper
 from StateReader.SymbolicStateReader import SymbolicStateReader
 from StateReader.game_object import GameObjectType
+from Utils.LevelSelection import LevelSelectionSchema
 from Utils.point2D import Point2D
-from Utils.trajectory_planner import SimpleTrajectoryPlanner
 
 
 class PigShooter(SBAgent):
-    def __init__(self, env: SBEnvironmentWrapper, id: int = 28888, level_list: list = []):
+    def __init__(self, env: SBEnvironmentWrapper, level_selection_function, id: int = 28888, level_list: list = []):
         SBAgent.__init__(self, level_list=level_list, env=env, id=id)
         # initialise a record of the levels to the agent
 
         self.id = id
-        self.tp = SimpleTrajectoryPlanner()
         self.model = np.loadtxt("Utils/model", delimiter=",")
+        self.level_selection_function = level_selection_function
+        self.state_representation_type = 'symbolic'
         self.target_class = list(map(lambda x: x.replace("\n", ""), open('Utils/target_class').readlines()))
         self.env = env  # used to sample random action
         self.level_selection_function = LevelSelectionSchema.MaxAttempts(max_attempts_value=5).select

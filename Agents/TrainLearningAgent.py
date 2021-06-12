@@ -1,5 +1,6 @@
 import argparse
 import math
+import os
 import random
 import time
 import warnings
@@ -9,10 +10,10 @@ import torch
 import torch.optim as optim
 from torch.utils.tensorboard import SummaryWriter
 
-from Utils.LevelSelection import LevelSelectionSchema
 from LearningAgents.LearningAgentThread import MultiThreadTrajCollection
-from SBEnviornment.SBEnvironmentWrapper import SBEnvironmentWrapper
+from SBEnvironment.SBEnvironmentWrapper import SBEnvironmentWrapper
 from Utils.Config import config
+from Utils.LevelSelection import LevelSelectionSchema
 from Utils.Parameters import Parameters
 
 warnings.filterwarnings('ignore')
@@ -63,30 +64,32 @@ capabiilty_settings = {'1_01': {'train': ['1_01_01', '1_01_02', '1_01_03'], 'tes
                                 'test': ['3_09_07', '3_09_08']}}
 
 if __name__ == '__main__':
-    mode = 'cross'
-    online_learning = True
     parser = argparse.ArgumentParser()
     parser.add_argument('--template', metavar='N', type=str)
-    parser.add_argument('--online_training', type=str2bool, default=True)
     parser.add_argument('--mode', type=str)
     args = parser.parse_args()
 
-    if args.mode == 'within':
-        param = Parameters([args.template], args.online_training)
+    if args.mode == 'within_template':
+        param = Parameters([args.template], False)
         c = config(**param.param)
         param_name = args.template
 
-    elif args.mode == 'cross':
+    elif args.mode == 'within_capability':
         capability_idx = args.template
         train_template = capabiilty_settings[capability_idx]['train']
         test_template = capabiilty_settings[capability_idx]['test']
-        param = Parameters(template=train_template, if_online_learning=args.online_training,
+        param = Parameters(template=train_template, if_online_learning=False,
                            test_template=test_template)
         c = config(**param.param)
-        param_name = "capability_{}_cross".format(train_template[0][:4])
+        param_name = "capability_{}".format(train_template[0][:4])
 
-    param_name = param_name + "_" + c.network.__name__ + "_" + c.multiagent.__name__
+    else:
+        raise NotImplementedError("unknown mode {}, please use within_template or within_capability ".format(args.mode))
+
     print('running {} mode template {} on {}'.format(args.mode, args.template, param_name))
+    if not os.path.exists('final_run'):
+        os.mkdir('final_run')
+
     writer = SummaryWriter(log_dir='final_run/{}'.format(param_name), comment=param_name)
     network = c.network(c.h, c.w, c.output, writer, c.device).to(c.device)
 
@@ -175,97 +178,8 @@ if __name__ == '__main__':
 
     print('training done')
     # training done, save the model
+    if not os.path.exists('LearningAgents/saved_model'):
+        os.mkdir('LearningAgents/saved_model')
     network.save_model("LearningAgents/saved_model/{}_{}.pt".format(param_name, c.num_update_steps))
-    del env
-
-    #####################################testing phase#########################################
-    total_train_time = 0
-    memory = c.memory_type(c.memory_size)
-    episodic_rewards = []
-    winning_rates = []
-    eps_decay = (0.01 / c.eps_start) ** (1 / c.test_steps)
-    level_winning_rate = {i: 0 for i in c.test_level_list}
-    test_train_time = c.train_time_per_ep // 4
-    if not c.online_training:
-        c.test_steps = 1
-        c.eps_start = 0
-    c.eps_start = c.eps_test
-    test_attempts_per_level = 5
-    for attempt in range(c.test_steps):
-        c.eps_start = c.eps_start * eps_decay
-        ## using multi-threading to collect memory ##
-        ## 5 attempts per level per attempts to speed up evaluation ##
-        agents = []
-        for i in range(c.num_worker):
-            level_sampled = sample_levels(c.test_level_list, c.num_worker, i)
-            if not level_sampled:
-                continue
-            env = SBEnvironmentWrapper(reward_type=c.reward_type, speed=c.simulation_speed)
-            agent = c.multiagent(id=i + 1, dqn=network, level_list=level_sampled, replay_memory=memory, env=env,
-                                 level_selection_function=LevelSelectionSchema.RepeatPlay(
-                                     test_attempts_per_level).select,
-                                 EPS_START=c.eps_start, writer=writer)
-            agent.action_selection_mode = 'sample'
-            agents.append(agent)
-
-        am = MultiThreadTrajCollection(agents)
-        am.connect_and_run_agents()
-        env.close()
-        time.sleep(5)
-
-        ## evaluate the agent's learning in testing performance ##
-        episodic_reward = []
-        winning_rate = []
-        max_reward = []
-        max_winning_rate = []
-
-        for idx in c.test_level_list:
-            for agent in agents:
-                try:
-                    if idx in agent.level_list:
-                        episodic_reward.append(np.average(agent.episode_rewards[idx]))
-                        winning_rate.append(np.average(agent.did_win[idx]))
-                        max_reward.append(np.max(agent.episode_rewards[idx]))
-                        max_winning_rate.append(np.max(agent.did_win[idx]))
-                        if int(level_winning_rate[idx]) < max(
-                                agent.did_win[idx]):
-                            level_winning_rate[idx] = max(
-                                agent.did_win[idx])
-                except KeyError:  # agent skipped level
-                    episodic_reward.append(0)
-                    winning_rate.append(0)
-
-        writer.add_scalar("average_testing_episodic_rewards", np.average(episodic_reward),
-                          (attempt + 1) * test_attempts_per_level)
-        writer.add_scalar("average_testing_winning_rates", np.average(winning_rate),
-                          (attempt + 1) * test_attempts_per_level)
-        writer.add_scalar("max_testing_episodic_rewards", np.average(max_reward),
-                          (attempt + 1) * test_attempts_per_level)
-        writer.add_scalar(
-            "max_testing_winning_rates - level is solved",
-            np.average(max_winning_rate), (attempt + 1) * test_attempts_per_level)
-        # percent of task solved
-        percent_task_solved = np.average(list(level_winning_rate.values()))
-        writer.add_scalar("percent of testing tasks solved",
-                          percent_task_solved, (attempt + 1) * test_attempts_per_level)
-        writer.flush()
-        del agents
-        torch.cuda.empty_cache()
-
-        ## online training phase ##
-        if c.online_training and attempt != c.test_steps - 1:
-            target_net = c.network(h=c.h, w=c.w, outputs=c.output, device=c.device).to(c.device)
-            target_net.load_state_dict(network.state_dict())
-            target_net.eval()
-            network.train_model(target_net, total_train_time=total_train_time, train_time=test_train_time,
-                                train_batch=c.train_batch, gamma=c.gamma, memory=memory, optimizer=optimizer)
-
-            del target_net
-            torch.cuda.empty_cache()
-            print('finish one testing epoch')
-            end_time = time.time()
-            print("running time: {:.2f}".format((end_time - start_time) / 60))
-            total_train_time += test_train_time
-
     total_end_time = time.time()
     print("finish running, total running time: {:.2f} mins".format((total_end_time - start_time) / 60))

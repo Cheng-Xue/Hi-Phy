@@ -1,6 +1,7 @@
 #!/bin/bash
+agent="$1"
 templates=$(python Utils/GenerateTemplateName.py)
 for val in $templates; do
     echo running $val
-    python RunMultiAgentTest.py --template $val --online_training true --mode within
+    python MultiAgentTestOnly.py --template $val --agent $agent
 done
