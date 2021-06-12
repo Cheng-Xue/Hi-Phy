@@ -113,6 +113,15 @@ We generated 100 tasks from each of the 65 task templates for the baseline analy
 
 ## 5. Baseline Agents and the Framework<a name="BAF"></a>
 
+Tested environments:
+- Ubuntu: 18.04/20.04
+- Python: 3.9
+- torch: 1.8.1
+- torchvision: 0.9.1
+- lxml: 4.6.3
+- tensorboard: 2.5.0
+- Java: 13.0.2/13.0.7
+
 Before running agents, please:
 
 1. Go to ```buildgame``` and unzip ```Linux.zip```
