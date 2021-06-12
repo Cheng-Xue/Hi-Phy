@@ -80,7 +80,7 @@ Please refer to the paper for more details how and why we attributed the capabil
 Based on the proposed hierarchy, we develop our H
 
 :-------------------------:|:-------------------------:|:-------------------------:
-![1.1.1](level_variations/examples/videos/1.1.1.gif) | ![1.1.1](level_variations/examples/videos/1.1.1.gif) | ![1.1.1](level_variations/examples/videos/1.1.1.gif)
+![1.1.1](level_variations/examples/videos/1.1.1.gif) ![1.1.1](level_variations/examples/videos/1.1.1.gif)
 
 ## 3. level generator - how code works
 ## 4. levels created for baseline analysis - dataset structure , different capability
