@@ -148,7 +148,7 @@ Before running agents, please:
 
 ### 5.2 How to run DQN Baseline<a name="RLA"></a>
 
-1. Go to Agents/
+1. Go to ```Agents/```
 2. In terminal, after grant execution permission, train the agent for within capability training
     ```sh
     ./TrainLearningAgent.sh within_capability
