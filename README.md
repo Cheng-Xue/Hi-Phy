@@ -1,11 +1,12 @@
 # Hi-Phy: A Benchmark for Hierarchical Physical Reasoning
-
-<center>Cheng Xue*, Vimukthini Pinto*, Chathura Gamage*, Peng Zhang, Jochen Renz<br></center>
+<p align="center">
+Cheng Xue*, Vimukthini Pinto*, Chathura Gamage*, Peng Zhang, Jochen Renz<br>
 School of Computing<br>
 The Australian National University<br>
 Canberra, Australia<br>
 {cheng.xue, vimukthini.inguruwattage, chathura.gamage}@anu.edu.au<br>
-{p.zhang, jochen.renz}@anu.edu.au 
+{p.zhang, jochen.renz}@anu.edu.au
+ </p>
 
 Reasoning about the behaviour of physical objects is a key capability of agents operating in physical worlds. Humans are
 very experienced in physical reasoning while it remains a major challenge for AI. To facilitate research addressing this
