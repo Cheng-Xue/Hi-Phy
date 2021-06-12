@@ -99,6 +99,9 @@ Based on the proposed hierarchy, we develop Hi-Phy benchmark in Angry Birds. Hi-
 <img src="tasks/example_tasks/videos/2.4.2.gif" width="1000"/> | 2.4: Understanding that objects in the enviornment may bounce. The bird need is needed to be bounced off the platform (dark-brown object) to hit and destroy the pig.
 <img src="tasks/example_tasks/videos/3.1.3.gif" width="1000"/> | 3.1: Understanding relative weight of objects. The small circular block is lighter than the big circular block. Out of the two blocks, the small circular block can only be rolled to reach the pig and destroy.
 <img src="tasks/example_tasks/videos/3.2.3.gif" width="2000"/> | 3.2: Understanding relative height of objects. The square block on top of the taller rectangular block will not fall through the gap due to the height of the reactangular block. Hence the square block on top of the shorter rectangular block needs to be toppled to fall through the gap and destroy the pig. 
+<img src="tasks/example_tasks/videos/3.3.3.gif" width="2000"/> | 3.3: Understanding relative width of objects. The bird cannot go through the lower entrance which has a narrow opening. Hence the bird is needed to be shot to the upper entrance to rach the pig and destoy.
+<img src="tasks/example_tasks/videos/3.4.3.gif" width="2000"/> | 3.4: Understanding shape difference of objects. The circular block on two triangle blocks can be rolled down by breaking a one triangle block and the circular block on two square blocks cannot be rolled down by breaking a one square block. Hence the triangle block needs to be destroyed to roll the circle and destroy the pig.
+
 
 
 <img src="tasks/example_tasks/videos/3.4.3.gif" width="250"/> <img src="tasks/example_tasks/videos/3.5.5.gif" width="250"/> <img src="tasks/example_tasks/videos/3.6.5.gif" width="250"/> 
