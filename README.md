@@ -81,7 +81,7 @@ Based on the proposed hierarchy, we develop our H
 
 :-------------------------:|:-------------------------:|:-------------------------:
 ![1.1.1](level_variations/examples/videos/1.1.1.gif) ![1.1.1](level_variations/examples/videos/1.1.1.gif)
-<img src="level_variations/examples/videos/1.1.1.gif" width="425"/> <img src="level_variations/examples/videos/1.1.1.gif" width="425"/> 
+<img src="level_variations/examples/videos/1.1.1.gif" width="425"/> <img src="level_variations/examples/videos/1.1.1.gif" width="425"/> <img src="level_variations/examples/videos/1.1.1.gif" width="425"/> 
 
 
 ## 3. level generator - how code works
