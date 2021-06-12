@@ -3,10 +3,11 @@ import math
 import time
 
 import numpy as np
-from HeuristicAgents.HeuristicAgentThread import MultiThreadTrajCollection
 from torch.utils.tensorboard import SummaryWriter
 
-from Agents.Utils.LevelSelection import LevelSelectionSchema
+from Utils.LevelSelection import LevelSelectionSchema
+from HeuristicAgents.HeuristicAgentThread import MultiThreadTrajCollection
+from HeuristicAgents.PigShooter import PigShooter
 from HeuristicAgents.RandomAgent import RandomAgent
 from SBEnviornment.SBEnvironmentWrapper import SBEnvironmentWrapper
 from Utils.Config import config
@@ -40,9 +41,17 @@ def sample_levels(training_level_set, num_agents, agent_idx):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Process some integers.')
     parser.add_argument('--template', metavar='N', type=str)
-    parser.add_argument('--online_training', type=str2bool, default=True)
+    parser.add_argument('--agent', type=str, default='PigShooter')
 
     args = parser.parse_args()
+
+    if args.agent == 'PigShooter':
+        test_agent = PigShooter
+    elif args.agent == 'RandomAgent':
+        test_agent = RandomAgent
+    else:
+        raise NotImplementedError(
+            "heuristic agent {} not implemented. Please use PigShooter or RandomAgent".format(args.agent))
 
     param = Parameters([args.template], if_online_learning=False)
     c = config(**param.param)
@@ -56,12 +65,14 @@ if __name__ == '__main__':
     for attempt in range(50):
         agents = []
         for i in range(c.num_worker):
-            level_sampled = sample_levels(c.test_level_list, c.num_worker, i)  # test level set needs to be the 1640 levels
+            level_sampled = sample_levels(c.test_level_list, c.num_worker,
+                                          i)  # test level set needs to be the 1640 levels
             if not level_sampled:
                 continue
             env = SBEnvironmentWrapper(reward_type='passing', speed=100)
-            agent = RandomAgent(env=env, level_list=level_sampled, id=i + 1,
-                                level_selection_function=LevelSelectionSchema.RepeatPlay(test_attempts_per_level).select)  # add number of attempts per level
+            agent = test_agent(env=env, level_list=level_sampled, id=i + 1,
+                                level_selection_function=LevelSelectionSchema.RepeatPlay(
+                                    test_attempts_per_level).select)  # add number of attempts per level
             agents.append(agent)
 
         am = MultiThreadTrajCollection(agents)

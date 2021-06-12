@@ -21,6 +21,10 @@ class SBAgent:
         self.action_type = None
         self.tp = SimpleTrajectoryPlanner()
         self.env = env
+        self.episode_rewards = {}
+        self.did_win = {}
+        self.state_representation_type = None
+
 
     def select_level(self):
         """
@@ -51,3 +55,15 @@ class SBAgent:
                 self.total_score_record[level]['total_score'] = total_score
 
         self.total_score_record[level]['attempts'] += 1
+
+    def update_episode_rewards(self, current_level, eps_reward):
+        if current_level not in self.episode_rewards:
+            self.episode_rewards[current_level] = [eps_reward]
+        else:
+            self.episode_rewards[current_level].append(eps_reward)
+
+    def update_winning(self, current_level, did_win):
+        if current_level not in self.did_win:
+            self.did_win[current_level] = [did_win]
+        else:
+            self.did_win[current_level].append(did_win)
