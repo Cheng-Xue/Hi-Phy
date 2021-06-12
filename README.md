@@ -87,15 +87,17 @@ Please refer to the paper for more details how and why we attributed the capabil
 
 ## 2. Hi-Phy in Angry Birds
 <a name="Hi-Phy"/></a>
-Based on the proposed hierarchy, we develop Hi-Phy benchmark in Angry Birds. Hi-Phy contains tasks from 65 task templates belonging to the fifteen capabilities. Shown below are fifteen example tasks in Hi-Phy representing the fifteen capabilities and the solutions for those tasks.
+Based on the proposed hierarchy, we develop Hi-Phy benchmark in Angry Birds. Hi-Phy contains tasks from 65 task templates belonging to the fifteen capabilities. The goal of an agent is to destroy all the pigs (green-coloured objects) in the tasks by shooting a given number of birds from the slingshot. Shown below are fifteen example tasks in Hi-Phy representing the fifteen capabilities and the solutions for those tasks. 
 
 | Task             |  Description |
 :-------------------------:|:-----------
-<img src="tasks/example_tasks/videos/1.1.1.gif" width="1000"/>  |  1.1: Understanding the instant effect of objects in an enviornment when an agent applys a single force. Agent needs to understand that applying a force to the pig (green-coloured object) destroys the pig and solves the task.
+<img src="tasks/example_tasks/videos/1.1.1.gif" width="1000"/> | 1.1: Understanding the instant effect of objects in an enviornment when an agent applys a single force. A force is needed to be applied to destroy the pig.
+<img src="tasks/example_tasks/videos/2.2.1.gif" width="1000"/> | 1.2: Unverstanding the instant effect of objects in an enviornment when an agent applys a multiple force. Multiple forces are needed to be applied to destroy the pig.
+<img src="tasks/example_tasks/videos/3.1.3.gif" width="1000"/> | 2.1: Understanding that objects in the enviornment may roll. The circular object is needed to be rolled on to the pig which causes the pig to be destroyed.
+<img src="tasks/example_tasks/videos/3.4.3.gif" width="1000"/> | 2.2: Understanding that objects in the enviornment may fall. The circular object is needed to be fallen on to the pig which causes the pig to be destroyed.
 
-<img src="tasks/example_tasks/videos/1.1.1.gif" width="250"/> <img src="tasks/example_tasks/videos/1.2.2.gif" width="250"/> <img src="tasks/example_tasks/videos/2.1.4.gif" width="250"/> 
-<img src="tasks/example_tasks/videos/2.2.1.gif" width="250"/> <img src="tasks/example_tasks/videos/2.3.1.gif" width="250"/> <img src="tasks/example_tasks/videos/2.4.2.gif" width="250"/> 
-<img src="tasks/example_tasks/videos/3.1.3.gif" width="250"/> <img src="tasks/example_tasks/videos/3.2.3.gif" width="250"/> <img src="tasks/example_tasks/videos/3.3.3.gif" width="250"/> 
+
+
 <img src="tasks/example_tasks/videos/3.4.3.gif" width="250"/> <img src="tasks/example_tasks/videos/3.5.5.gif" width="250"/> <img src="tasks/example_tasks/videos/3.6.5.gif" width="250"/> 
 <img src="tasks/example_tasks/videos/3.7.5.gif" width="250"/> <img src="tasks/example_tasks/videos/3.8.1.gif" width="250"/> <img src="tasks/example_tasks/videos/3.9.4.gif" width="250"/> 
 
