@@ -95,6 +95,12 @@ Based on the proposed hierarchy, we develop Hi-Phy benchmark in Angry Birds. Hi-
 <img src="tasks/example_tasks/videos/3.4.3.gif" width="250"/> <img src="tasks/example_tasks/videos/3.5.5.gif" width="250"/> <img src="tasks/example_tasks/videos/3.6.5.gif" width="250"/> 
 <img src="tasks/example_tasks/videos/3.7.5.gif" width="250"/> <img src="tasks/example_tasks/videos/3.8.1.gif" width="250"/> <img src="tasks/example_tasks/videos/3.9.4.gif" width="250"/> 
 
+Sceenshots of the 65 task templates are shown below.
+
+<img src="tasks/example_tasks/images/1.1.1.png" width="250"/> <img src="tasks/example_tasks/videos/1.1.2.png" width="250"/> <img src="tasks/example_tasks/videos/1.1.3.png" width="250"/> 
+
+
+
 ## 3. Task generator
 <a name="Task-generator"/></a>
 We develop a task generator that can generate tasks for the task templates we designed.<br>
