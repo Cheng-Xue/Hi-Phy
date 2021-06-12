@@ -96,8 +96,9 @@ We develop a task generator that can generate tasks for the task templates we de
      ```
     4. Generated tasks will be available in the ```output```
 
-## 4. Tasks created for baseline analysis
+## 4. Tasks generated for baseline analysis
 <a name="Tasks-generated-for-baselines"/></a>
+We generated 100 tasks from each of the 65 task templates for the baseline analysis. The generated tasks can be found in ```tasks/generated_tasks.zip```
 
 
 ## 5. baseline agents - how to run baseline agents - science birds repo.
