@@ -17,8 +17,7 @@ class RandomAgent(SBAgent):
         self.env = env  # used to sample random action
         self.level_selection_function = level_selection_function
         self.state_representation_type = 'symbolic'
-        self.episode_rewards = {}
-        self.did_win = {}
+
 
     def select_level(self):
         # you can choose to implement this by yourself, or just get it from the LevelSelectionSchema

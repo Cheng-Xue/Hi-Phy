@@ -1,5 +1,6 @@
 import argparse
 import math
+import os
 import random
 import time
 import warnings
@@ -63,16 +64,13 @@ capabiilty_settings = {'1_01': {'train': ['1_01_01', '1_01_02', '1_01_03'], 'tes
                                 'test': ['3_09_07', '3_09_08']}}
 
 if __name__ == '__main__':
-    mode = 'cross'
-    online_learning = True
     parser = argparse.ArgumentParser()
     parser.add_argument('--template', metavar='N', type=str)
-    parser.add_argument('--online_training', type=str2bool, default=True)
     parser.add_argument('--mode', type=str)
     args = parser.parse_args()
 
     if args.mode == 'within_template':
-        param = Parameters([args.template], args.online_training)
+        param = Parameters([args.template], False)
         c = config(**param.param)
         param_name = args.template
 
@@ -80,7 +78,7 @@ if __name__ == '__main__':
         capability_idx = args.template
         train_template = capabiilty_settings[capability_idx]['train']
         test_template = capabiilty_settings[capability_idx]['test']
-        param = Parameters(template=train_template, if_online_learning=args.online_training,
+        param = Parameters(template=train_template, if_online_learning=False,
                            test_template=test_template)
         c = config(**param.param)
         param_name = "capability_{}".format(train_template[0][:4])
@@ -89,6 +87,9 @@ if __name__ == '__main__':
         raise NotImplementedError("unknown mode {}, please use within_template or within_capability ".format(args.mode))
 
     print('running {} mode template {} on {}'.format(args.mode, args.template, param_name))
+    if not os.path.exists('final_run'):
+        os.mkdir('final_run')
+
     writer = SummaryWriter(log_dir='final_run/{}'.format(param_name), comment=param_name)
     network = c.network(c.h, c.w, c.output, writer, c.device).to(c.device)
 
@@ -177,6 +178,8 @@ if __name__ == '__main__':
 
     print('training done')
     # training done, save the model
+    if not os.path.exists('LearningAgents/saved_model'):
+        os.mkdir('LearningAgents/saved_model')
     network.save_model("LearningAgents/saved_model/{}_{}.pt".format(param_name, c.num_update_steps))
     total_end_time = time.time()
     print("finish running, total running time: {:.2f} mins".format((total_end_time - start_time) / 60))

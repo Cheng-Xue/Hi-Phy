@@ -4,9 +4,9 @@ from shutil import copyfile
 import lxml.etree as etree
 os.chdir("../")
 operating_system = 'Linux'
-target_level_path = '../level_variations/generated_levels/second generation - 100 variations'
-origin_level_path = '../buildgame/{}/9001_Data/StreamingAssets/Levels/novelty_level_2/type1/Levels/'.format(operating_system)
-game_level_path = '9001_Data/StreamingAssets/Levels/novelty_level_2/type1/Levels/'.format(operating_system)
+target_level_path = '../level_variations/generated_levels/fourth generation'
+origin_level_path = '../buildgame/{}/9001_Data/StreamingAssets/Levels/novelty_level_1/type1/Levels/'.format(operating_system)
+game_level_path = '9001_Data/StreamingAssets/Levels/novelty_level_1/type1/Levels/'.format(operating_system)
 game_config_path = '../buildgame/{}/config.xml'.format(operating_system)
 
 # each for each template, move 20 levels
