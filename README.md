@@ -116,6 +116,7 @@ We generated 100 tasks from each of the 65 task templates for the baseline analy
 Tested environments:
 - Ubuntu: 18.04/20.04
 - Python: 3.9
+- Numpy: 1.20
 - torch: 1.8.1
 - torchvision: 0.9.1
 - lxml: 4.6.3
