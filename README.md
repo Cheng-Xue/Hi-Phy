@@ -33,14 +33,14 @@ develop intelligent agents with advanced, human-like physical reasoning capabili
     1. [Sub paragraph](#subparagraph1)
 4. [Another paragraph](#paragraph2)
 5. [Baseline Agents](#BAF)
-  1. [How to run heuristic agents](#RHA)
-  2. [How to run DQN Baseline](#RLA)
-  3. [How to develop your own agent](#ROA)
-  4. [Outline of the Agent Code](#code)
+   1. [How to run heuristic agents](#RHA)
+   2. [How to run DQN Baseline](#RLA)
+   3. [How to develop your own agent](#ROA)
+   4. [Outline of the Agent Code](#code)
 6. [Framework](#Framework)
-  1. [The Game Environment](#Env)
-  2. [Symbolic Representation Data Structure](#SymbolicRepresentation)
-  3. [Communication Protocols](#Protocol)
+   1. [The Game Environment](#Env)
+   2. [Symbolic Representation Data Structure](#SymbolicRepresentation)
+   3. [Communication Protocols](#Protocol)
 ---
 
 
