@@ -79,7 +79,7 @@ Please refer to the paper for more details how and why we attributed the capabil
 <a name="Hi-Phy"/></a>
 Based on the proposed hierarchy, we develop our H
 
-<img src="level_variations/examples/videos/1.1.1.gif" width="300"/> <img src="level_variations/examples/videos/1.2.2.gif" width="300"/> <img src="level_variations/examples/videos/2.1.4.gif" width="300"/> 
+<img src="level_variations/examples/videos/1.1.1.gif" width="250"/> <img src="level_variations/examples/videos/1.2.2.gif" width="250"/> <img src="level_variations/examples/videos/2.1.4.gif" width="250"/> 
 <img src="level_variations/examples/videos/2.2.1.gif" width="300"/> <img src="level_variations/examples/videos/2.3.1.gif" width="300"/> <img src="level_variations/examples/videos/2.4.2.gif" width="300"/> 
 <img src="level_variations/examples/videos/3.1.3.gif" width="300"/> <img src="level_variations/examples/videos/3.2.3.gif" width="300"/> <img src="level_variations/examples/videos/3.3.3.gif" width="300"/> 
 <img src="level_variations/examples/videos/3.4.3.gif" width="300"/> <img src="level_variations/examples/videos/3.5.5.gif" width="300"/> <img src="level_variations/examples/videos/3.6.5.gif" width="300"/> 
