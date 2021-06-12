@@ -94,7 +94,7 @@ To run the task generator:<br>
     3. Run the tak generator<br>
      ```sh
         python tasks\generte_tasks.py
-     ```
+     ``` <br>
     4. Generated tasks will be available in ```tasks/task_generator/output```. <br>
 
 ## 4. levels created for baseline analysis - dataset structure , different capability
