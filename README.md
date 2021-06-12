@@ -91,11 +91,11 @@ We develop a task generator that can generate tasks for task templates we design
 To run the task generator:<br>
     1. Go to ```tasks/task_generator``` <br>
     2. Copy the task templates that you want to generate tasks into the ```task_generator\input``` folder (the level templates can be found in ```tasks/task_templates``` folder) <br>
-    3. Run the tak generator
+    3. Run the tak generator<br>
      ```sh
         python tasks\generte_tasks.py
      ```
-    4. Generated tasks will be available in ```tasks/task_generator/output``` folder. <br>
+    4. Generated tasks will be available in ```tasks/task_generator/output```. <br>
 
 ## 4. levels created for baseline analysis - dataset structure , different capability
 ## 5. baseline agents - how to run baseline agents - science birds repo.
