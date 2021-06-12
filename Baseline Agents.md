@@ -62,7 +62,7 @@ Before running agents, please:
 
 We provide a gym-like environment. For a simple demo, which can be found at ```demo.py```
 
-'''python 
+''' 
 from SBAgent import SBAgent from SBEnvironment.SBEnvironmentWrapper import SBEnvironmentWrapper
 # for using reward as score and 50 times faster game play
 
