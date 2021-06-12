@@ -1,11 +1,121 @@
-## Baseline Agents and Framework<a name="BAF"></a>
+
+# Hi-Phy: A Benchmark for Hierarchical Physical Reasoning*
+<p align="center">
+Cheng Xue*, Vimukthini Pinto*, Chathura Gamage*, Peng Zhang, Jochen Renz<br>
+School of Computing<br>
+The Australian National University<br>
+Canberra, Australia<br>
+{cheng.xue, vimukthini.inguruwattage, chathura.gamage}@anu.edu.au<br>
+{p.zhang, jochen.renz}@anu.edu.au
+ </p>
+
+Reasoning about the behaviour of physical objects is a key capability of agents operating in physical worlds. Humans are
+very experienced in physical reasoning while it remains a major challenge for AI. To facilitate research addressing this
+problem, several benchmarks have been proposed recently. However, these benchmarks do not enable us to measure an
+agent's granular physical reasoning capabilities when solving a complex reasoning task. In this paper, we propose a new
+benchmark for physical reasoning that allows us to test individual physical reasoning capabilities. Inspired by how
+humans acquire these capabilities, we propose a general hierarchy of physical reasoning capabilities with increasing
+complexity. Our benchmark tests capabilities according to this hierarchy through generated physical reasoning tasks in
+the video game Angry Birds. This benchmark enables us to conduct a comprehensive agent evaluation by measuring the
+agent's granular physical reasoning capabilities. We conduct an evaluation with human players, learning agents, and
+heuristic agents and determine their capabilities. Our evaluation shows that learning agents, with good local
+generalization ability, still struggle to learn the underlying physical reasoning capabilities and perform worse than
+current state-of-the-art heuristic agents and humans. We believe that this benchmark will encourage researchers to
+develop intelligent agents with advanced, human-like physical reasoning capabilities.
+
+* equal contribution
+
+---
+#### Table of contents
+1. [Hierarchy](#Hierarchy)
+2. [Hi-Phy in Angry Birds](#Hi-Phy)
+3. [Task Generator](#Task-generator)
+    1. [Sub paragraph](#subparagraph1)
+4. [Another paragraph](#paragraph2)
+5. [Baseline Agents](#BAF)
+   1. [How to run heuristic agents](#RHA)
+   2. [How to run DQN Baseline](#RLA)
+   3. [How to develop your own agent](#ROA)
+   4. [Outline of the Agent Code](#code)
+6. [Framework](#Framework)
+   1. [The Game Environment](#Env)
+   2. [Symbolic Representation Data Structure](#SymbolicRepresentation)
+   3. [Communication Protocols](#Protocol)
+---
+
+
+
+## 1.Hierarchy 
+<a name="Hierarchy"/></a>
+Humans and AI approaches learn much better when examples are presented in a meaningful order with increasing complexity
+than when examples are presented randomly. We thereby propose a hierarchy for physical reasoning that enables an agent
+to start with increasing complexity to facility training and evaluating agents to work in the real physical world.
+
+Our hierarchy consists three levels and fifteen capabilities:
+
+**Level 1: Understanding the instant effect of the first force applied to objects in an environment as a result of an
+agent's action.**
+
+    Level 1 capabilities:
+    1.1: Understanding the instant effect of objects in an enviornment when an agent applys a single force.
+    1.2: Unverstanding the instant effect of objects in an enviornment when an agent applys a multiple force.
+
+**Level 2: Understanding objects movement in the environment after a force is applied.**
+
+    Level 2 capabilities:
+    2.1: Understanding that objects in the enviornment may roll.
+    2.2: Understanding that objects in the enviornment may fall.
+    2.3: Understanding that objects in the enviornment may slide.
+    2.4: Understanding that objects in the enviornment may bounce.
+
+**Level 3: Performing in tasks that require capabilities 1) human developed in infancy, 2) required in robotics to develop agents that
+work alongside people, and 3) currently fall short in reinforcement learning.**
+
+    Level 3 capabilities:
+    3.1: Understanding relative weight of objects.
+    3.2: Understanding relative height of objects.
+    3.3: Understanding relative width of objects.
+    3.4: Understanding shape difference of objects.
+    3.5: Understanding how to preform non-greedy actions.
+    3.6: Understanding structural weak points/stability.
+    3.7: Understanding how to clear a path towards the goal.
+    3.8: Understanding how to preform action with adequate timing.
+    3.9: Understanding how to use tools.
+
+Please refer to the paper for more details how and why we attributed the capabilities in this way.
+
+## 2. Hi-Phy in Angry Birds
+<a name="Hi-Phy"/></a>
+Based on the proposed hierarchy, we develop Hi-Phy benchmark in Angry Birds. Hi-Phy contains tasks from 65 task templates belonging to the fifteen capabilities. Shown below are fifteen example tasks in Hi-Phy representing the fifteen capabilities.
+
+<img src="tasks/example_tasks/videos/1.1.1.gif" width="250"/> <img src="tasks/example_tasks/videos/1.2.2.gif" width="250"/> <img src="tasks/example_tasks/videos/2.1.4.gif" width="250"/> 
+<img src="tasks/example_tasks/videos/2.2.1.gif" width="250"/> <img src="tasks/example_tasks/videos/2.3.1.gif" width="250"/> <img src="tasks/example_tasks/videos/2.4.2.gif" width="250"/> 
+<img src="tasks/example_tasks/videos/3.1.3.gif" width="250"/> <img src="tasks/example_tasks/videos/3.2.3.gif" width="250"/> <img src="tasks/example_tasks/videos/3.3.3.gif" width="250"/> 
+<img src="tasks/example_tasks/videos/3.4.3.gif" width="250"/> <img src="tasks/example_tasks/videos/3.5.5.gif" width="250"/> <img src="tasks/example_tasks/videos/3.6.5.gif" width="250"/> 
+<img src="tasks/example_tasks/videos/3.7.5.gif" width="250"/> <img src="tasks/example_tasks/videos/3.8.1.gif" width="250"/> <img src="tasks/example_tasks/videos/3.9.4.gif" width="250"/> 
+
+## 3. Task generator
+<a name="Task-generator"/></a>
+We develop a task generator that can generate tasks for the task templates we designed.<br>
+1. To run the task generator:<br>
+    1. Go to ```tasks/task_generator```
+    2. Copy the task templates that you want to generate tasks into the ```tasks\task_generator\input``` (the level templates can be found in ```tasks/task_templates```)
+    3. Run the tak generator
+     ```
+        python tasks\generte_tasks.py
+     ```
+    4. Generated tasks will be available in ```tasks/task_generator/output```
+
+## 4. levels created for baseline analysis - dataset structure , different capability
+
+## 5. Baseline Agents and the Framework<a name="BAF"></a>
 
 Before running agents, please:
 
 1. Go to ```buildgame``` and unzip ```Linux.zip```
 2. Go to ```level_varitions/generated_levels``` and unzip ```fourth generation.zip```
 
-### How to run heuristic agents<a name="RHA"></a>
+### 5.1 How to run heuristic agents<a name="RHA"></a>
 
 1. Run Java heuristic agents: Datalab and Eagle Wings: <br>
 
@@ -36,7 +146,7 @@ Before running agents, please:
        ./TestPythonHeuristicAgent.sh PigShooter
        ```
 
-### How to run DQN Baseline<a name="RLA"></a>
+### 5.2 How to run DQN Baseline<a name="RLA"></a>
 
 1. Go to Agents/
 2. In terminal, after grant execution permission, train the agent for within capability training
@@ -58,7 +168,7 @@ Before running agents, please:
     python TestAgentOfflineWithinCapability.py
     ```
 
-### How to develop your own agent <a name="ROA"></a>
+### 5.3 How to develop your own agent <a name="ROA"></a>
 
 We provide a gym-like environment. For a simple demo, which can be found at ```demo.py```
 
@@ -83,7 +193,7 @@ We provide a gym-like environment. For a simple demo, which can be found at ```d
    s, r, is_done, info = env.reload_current_level() #go to the next level
 ```
     
-### Outline of the Agent Code <a name="Code"></a>
+### 5.4 Outline of the Agent Code <a name="Code"></a>
 
 The ./Agents folder contains all the relevant source code of our agents. Below is the outline of the code (this is a
 simple description. Detailed documentation in progress):
@@ -132,13 +242,15 @@ simple description. Detailed documentation in progress):
 14. ```TestPythonHeuristicAgent.sh```: Bash Script to test heuristic agent's performance on all templates.
 15. ```TrainLearningAgent.sh```: Bash Script to train learning agents on all templates/capabilities. 
 
-### The Game Environment<a name="Env"></a>
+## 6. Framework<a name="Framework"></a>
+
+### 6.1 The Game Environment<a name="Env"></a>
 
 1. The coordination system
     - in the science birds game, the origin point (0,0) is the bottom-left corner, and the Y coordinate increases along
       the upwards direction, otherwise the same as above.
 
-### Symbolic Representation Data Structure<a name="SymbolicRepresentation"></a>
+### 6.2 Symbolic Representation Data Structure<a name="SymbolicRepresentation"></a>
 
 1. Symbolic Representation data of game objects is stored in a Json object. The json object describes an array where each element
    describes a game object. Game object categories, and their properties are described below:
@@ -192,7 +304,7 @@ simple description. Detailed documentation in progress):
     - The noise is uniformly distributed
     - We will later offer more sophisticated and adjustable noise.
 
-### Communication Protocols<a name="Protocol"></a>
+### 6.3 Communication Protocols<a name="Protocol"></a>
 
 <table style="text-align:center;">
     <thead>
@@ -442,3 +554,4 @@ simple description. Detailed documentation in progress):
 	</tbody>
 
 </table>
+
