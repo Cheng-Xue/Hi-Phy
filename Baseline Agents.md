@@ -53,7 +53,7 @@ to start with increasing complexity to facility training and evaluating agents t
 
 Our hierarchy consists three levels and fifteen capabilities:
 
-**Level 1: Understanding the instant effect of the first force applied to objects in an environment as a result of an
+**Level 1: Understanding the instant effect of the first force applied on objects in an environment as a result of an
 agent's action.**
 
     Level 1 capabilities:
@@ -106,7 +106,7 @@ We develop a task generator that can generate tasks for the task templates we de
      ```
     4. Generated tasks will be available in ```tasks/task_generator/output```
 
-## 4. levels created for baseline analysis - dataset structure , different capability
+## 4. Levels Created for Baseline Analysis 
 
 ## 5. Baseline Agents and the Framework<a name="BAF"></a>
 
