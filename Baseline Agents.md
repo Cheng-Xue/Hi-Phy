@@ -70,7 +70,7 @@ We provide a gym-like environment. For a simple demo, which can be found at ```d
    env = SBEnvironmentWrapper(reward_type="score", speed=50)  # to use score reward and 50 times faster game play
    level_list = [1, 2, 3]  # level list for the agent to play dummy_agent = SBAgent(env=env, level_list=level_list)  #
    initialise agent dummy_agent.state_representation_type = 'image' # use 'symbolic' to use symbolic representation as state and run with headless mode env.make(agent=dummy_agent, start_level=dummy_agent.level_list[0],
-   state_representation_type=dummy_agent.state_representation_type)  # initialise the environment
+   state_representation_type = dummy_agent.state_representation_type)  # initialise the environment
    
    s, r, is_done, info = env.reset()  # get ready for running for level_idx in level_list:
    is_done = False while not is_done:
