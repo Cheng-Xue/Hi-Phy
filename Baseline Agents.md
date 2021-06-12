@@ -136,7 +136,7 @@ Before running agents, please:
           java -jar eaglewings_037_v3_java12.jar 1
           ```
 2. Run *Random Agent* and *Pig Shooter*: <br>
-    1. Go to Agents/
+    1. Go to ```Agents/```
     2. In terminal, after grant execution permission run Random Agent
        ```sh
        ./TestPythonHeuristicAgent.sh RandomAgent
@@ -195,7 +195,7 @@ We provide a gym-like environment. For a simple demo, which can be found at ```d
     
 ### 5.4 Outline of the Agent Code <a name="Code"></a>
 
-The ./Agents folder contains all the relevant source code of our agents. Below is the outline of the code (this is a
+The ```./Agents``` folder contains all the relevant source code of our agents. Below is the outline of the code (this is a
 simple description. Detailed documentation in progress):
 
 1. ```Client```:
