@@ -57,7 +57,7 @@ class config:
         self.train_level_list = []
         self.test_level_list = []
         self.total_level = 0
-        self.target_level_path = '../level_variations/generated_levels/fourth generation'
+        self.target_level_path = '../tasks/generated_tasks/'
         self.origin_level_path = '../buildgame/{}/9001_Data/StreamingAssets/Levels/novelty_level_1/type1/Levels/'.format(
             self.os)
         self.game_level_path = '9001_Data/StreamingAssets/Levels/novelty_level_1/type1/Levels/'.format(self.os)

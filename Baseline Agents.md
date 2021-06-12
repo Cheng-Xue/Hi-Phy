@@ -113,7 +113,7 @@ We develop a task generator that can generate tasks for the task templates we de
 Before running agents, please:
 
 1. Go to ```buildgame``` and unzip ```Linux.zip```
-2. Go to ```level_varitions/generated_levels``` and unzip ```fourth generation.zip```
+2. Go to ```task/generated_tasks``` and unzip ```generated_tasks.zip```
 
 ### 5.1 How to run heuristic agents<a name="RHA"></a>
 

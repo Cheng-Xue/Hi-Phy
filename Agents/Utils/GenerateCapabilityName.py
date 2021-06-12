@@ -1,7 +1,7 @@
 import os
 import sys
 import argparse
-target_level_path = '../level_variations/generated_levels/fourth generation'
+target_level_path = '../tasks/generated_tasks/'
 
 templates_to_run = []
 levels = sorted(os.listdir(target_level_path))
