@@ -20,7 +20,6 @@ class PigShooter(SBAgent):
         self.state_representation_type = 'symbolic'
         self.target_class = list(map(lambda x: x.replace("\n", ""), open('Utils/target_class').readlines()))
         self.env = env  # used to sample random action
-        self.level_selection_function = LevelSelectionSchema.MaxAttempts(max_attempts_value=5).select
 
     def select_level(self):
         # you can choose to implement this by yourself, or just get it from the LevelSelectionSchema
