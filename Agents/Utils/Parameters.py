@@ -6,7 +6,7 @@ from LearningAgents.RLNetwork.DQNSymbolicResnet import DQNSymbolicResNet
 from LearningAgents.RLNetwork.DQNSymbolicDuelingFC import DQNSymbolicDuelingFC
 from LearningAgents.RLNetwork.DQNSymbolicDuelingFC_v1 import DQNSymbolicDuelingFC_v1
 from LearningAgents.RLNetwork.DQNSymbolicDuelingFC_v2 import DQNSymbolicDuelingFC_v2
-
+import torch
 from LearningAgents.RLNetwork.DQNImage import DQNImage
 from LearningAgents.Memory import ReplayMemory, PrioritizedReplayMemory, PrioritizedReplayMemoryBalanced, PrioritizedReplayMemorySumTree
 
@@ -17,7 +17,7 @@ class Parameters:
             # operating system
             'os': "Linux",
             # pytorch parameters
-            'device': "cuda:1",
+            'device': "cuda:1" if torch.cuda.device_count() > 1 else "cuda:0",
 
             # image network parameters
             'h': 120,
