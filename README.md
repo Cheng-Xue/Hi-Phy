@@ -107,7 +107,7 @@ Based on the proposed hierarchy, we develop Hi-Phy benchmark in Angry Birds. Hi-
 <img src="tasks/example_tasks/videos/3.8.1.gif" width="2000"/> | 3.8: Understanding how to perform action with adequate timing. First, the two circular objects are needed to be rolled to the ramp. Then, after the first circle passes the prop and before the second circle reaches the prop, the prop needs to be destroyed to fall the second circle onto the lower pig.
 <img src="tasks/example_tasks/videos/3.9.4.gif" width="2000"/> | 3.9: Understanding how to use tools. The blue bird (considered as a tool) splits into three other birds when it is tapped in the flight as opposed to the red bird without such ability. The blue bird is needed to be tapped at the correct position to reach the two separated pigs that cannot be destroyed with a single bird.
 
-Sceenshots of the 65 task templates are shown below.
+Sceenshots of the 65 task templates are shown below. x.y.z represents the z<sup></sup> task template of the y<sup></sup> capability of the hierarchy level x.
 
 <table align="center">
 <tr>
