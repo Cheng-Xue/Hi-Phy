@@ -109,9 +109,7 @@ Based on the proposed hierarchy, we develop Hi-Phy benchmark in Angry Birds. Hi-
 
 Sceenshots of the 65 task templates are shown below.
 
-<figure class="image">
-<img src="tasks/example_tasks/images/1.1.1.png" width="250"/> <img src="tasks/example_tasks/images/1.1.2.png" width="250"/> <img src="tasks/example_tasks/images/1.1.3.png" width="250"/><figcaption>{{ include.description }}</figcaption>
-	</figure>
+<img src="tasks/example_tasks/images/1.1.1.png" width="250"/> <img src="tasks/example_tasks/images/1.1.2.png" width="250"/> <img src="tasks/example_tasks/images/1.1.3.png" width="250"/>
 <img src="tasks/example_tasks/images/1.2.1.png" width="250"/> <img src="tasks/example_tasks/images/1.2.2.png" width="250"/> <img src="tasks/example_tasks/images/1.2.3.png" width="250"/> 
 <img src="tasks/example_tasks/images/1.2.4.png" width="250"/> <img src="tasks/example_tasks/images/1.2.5.png" width="250"/> <img src="tasks/example_tasks/images/2.1.1.png" width="250"/> 
 <img src="tasks/example_tasks/images/2.1.2.png" width="250"/> <img src="tasks/example_tasks/images/2.1.3.png" width="250"/> <img src="tasks/example_tasks/images/2.1.4.png" width="250"/> 
