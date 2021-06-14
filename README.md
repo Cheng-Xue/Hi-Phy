@@ -132,6 +132,34 @@ Sceenshots of the 65 task templates are shown below.
 <img src="tasks/example_tasks/images/3.9.2.png" width="250"/> <img src="tasks/example_tasks/images/3.9.3.png" width="250"/> <img src="tasks/example_tasks/images/3.9.4.png" width="250"/> 
 <img src="tasks/example_tasks/images/3.9.5.png" width="250"/> <img src="tasks/example_tasks/images/3.9.6.png" width="250"/>
 
+<table align="center">
+<tr>
+    <td><img src="tasks/example_tasks/images/1.1.1.png" width="500"/></td>
+    <td><img src="tasks/example_tasks/images/1.1.2.png" width="500"/></td>
+    <td><img src="tasks/example_tasks/images/1.1.3.png" width="500"/></td>
+    <td><img src="tasks/example_tasks/images/1.2.1.png" width="500"/></td>
+</tr>
+<tr align="center">
+     <td> 1.1.1 </td>
+     <td> 1.1.2 </td>
+     <td> 1.1.3 </td>
+     <td> 1.2.1 </td>
+</tr>
+<tr>
+    <td><img src="tasks/example_tasks/images/1.1.1.png" width="500"/></td>
+    <td><img src="tasks/example_tasks/images/1.1.2.png" width="500"/></td>
+    <td><img src="tasks/example_tasks/images/1.1.3.png" width="500"/></td>
+    <td><img src="tasks/example_tasks/images/1.2.1.png" width="500"/></td>
+</tr>
+<tr align="center">
+     <td> 1.1.1 </td>
+     <td> 1.1.2 </td>
+     <td> 1.1.3 </td>
+     <td> 1.2.1 </td>
+</tr>
+</table>
+
+
 ## 3. Task generator
 <a name="Task-generator"/></a>
 We develop a task generator that can generate tasks for the task templates we designed.<br>
