@@ -373,17 +373,6 @@ Sceenshots of the 65 task templates are shown below.
 	<td> 3.9.6 </td>
 </tr>
 
-<tr>
-	<td><img src="tasks/example_tasks/images/.png" width="500"/></td>
-	<td><img src="tasks/example_tasks/images/.png" width="500"/></td>
-	<td><img src="tasks/example_tasks/images/.png" width="500"/></td>
-</tr>
-<tr align="center">
-	<td>  </td>
-	<td>  </td>
-	<td>  </td>
-</tr>
-	
 </table>
 
 
