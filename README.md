@@ -344,12 +344,10 @@ Sceenshots of the 65 task templates are shown below.
 <tr>
 	<td><img src="tasks/example_tasks/images/3.9.5.png" width="500"/></td>
 	<td><img src="tasks/example_tasks/images/3.9.6.png" width="500"/></td>
-	<td></td>
 </tr>
 <tr align="center">
 	<td> 3.9.5 </td>
 	<td> 3.9.6 </td>
-	<td> </td>
 </tr>
 
 </table>
