@@ -97,15 +97,8 @@ class DQNBase(nn.Module):
 
             state_action_values = self(state_batch).gather(1, action_batch)
 
-            # if there's only one bird, we don't need to use the target_net, as the after one-shot, the game is ended
-            # the value for next state is always 0
-            # we just need to predict the function of Q(s,a) = reward
-            if True:
-                # print(state_action_values)
-                next_state_values = torch.zeros(state_action_values.size()).to(self.device)
-                if not all(is_done_batch == 1):
-                    next_state_values[is_done_batch != 1] = target_net(next_state_batch[is_done_batch != 1]).max(1)[
-                        0].detach().view(-1, 1)
+            next_state_values = target_net(next_state_batch).max(1)[0].detach().view(-1, 1)
+            next_state_values[is_done_batch] = 0  # Q value for end states is 0.
 
             expected_state_action_values = (next_state_values * gamma) + reward_batch.view(-1, 1)
             errors = expected_state_action_values - state_action_values
