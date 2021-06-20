@@ -24,7 +24,7 @@ current state-of-the-art heuristic agents and humans. We believe that this bench
 develop intelligent agents with advanced, human-like physical reasoning capabilities.
 
 * equal contribution
-
+https://arxiv.org/abs/2106.09692
 ---
 #### Table of contents
 1. [Hierarchy](#Hierarchy)
