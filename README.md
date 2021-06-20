@@ -25,6 +25,8 @@ develop intelligent agents with advanced, human-like physical reasoning capabili
 
 \* equal contribution
 
+link of the paper: https://arxiv.org/abs/2106.09692
+
 ---
 #### Table of contents
 1. [Hierarchy](#Hierarchy)
