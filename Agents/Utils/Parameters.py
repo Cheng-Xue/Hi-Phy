@@ -27,11 +27,11 @@ class Parameters:
             # multiagent trainning parameters
             'num_update_steps': 12 if not test_template else 18,
             'num_level_per_agent': 10,
-            'num_worker': 50,
+            'num_worker': 10,
             'multiagent': DQNDiscreteAgent,
             'training_attempts_per_level': 5,
             'memory_size': 100000,
-            'memory_type': PrioritizedReplayMemoryBalanced,
+            'memory_type': ReplayMemory,
             # single agent training parameters
             'singleagent': None,
 

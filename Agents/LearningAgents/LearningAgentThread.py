@@ -5,7 +5,7 @@ from typing import List
 
 import torch
 from LearningAgents.LearningAgent import LearningAgent
-from SBEnvironment.SBEnvironmentWrapper import SBEnvironmentWrapper
+from SBEnviornment.SBEnvironmentWrapper import SBEnvironmentWrapper
 
 
 class AgentThread(threading.Thread):
@@ -97,6 +97,7 @@ class AgentThread(threading.Thread):
                         return
                     s, r, is_done, info = self.env.reload_current_level()
         except socket.timeout:
+            print("sever response timeout, stop the agent")
             return
 
 # Multithread agents manager
