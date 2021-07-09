@@ -116,7 +116,7 @@ if __name__ == '__main__':
     episodic_rewards = []
     winning_rates = []
     total_train_time = 0
-    total_update_steps = len(level_1_template + level_2_template + level_3_template) * 2
+    total_update_steps = len(level_1_template + level_2_template + level_3_template) * 5
     eps_decay = (0.99 / (total_update_steps - 20))
     level_winning_rate = {i: 0 for i in config(**param.param).train_level_list}
     start_time = time.time()
