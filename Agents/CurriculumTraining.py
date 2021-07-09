@@ -30,14 +30,19 @@ def str2bool(v):
         raise argparse.ArgumentTypeError('Boolean value expected.')
 
 
-def sample_levels(training_level_set, num_agents, agent_idx):
+def sample_levels(training_level_set, num_agents, agent_idx, **kwargs):
     '''
     given idx, return the averaged distributed levels
     '''
+    level_per_agent = kwargs['level_per_agent'] if 'level_per_agent' in kwargs else None
     n = math.ceil(len(training_level_set) / num_agents)
     total_list = []
     for i in range(0, len(training_level_set), n):
-        total_list.append(training_level_set[i:i + n])
+        levels_assigned = training_level_set[i:i + n]
+        if level_per_agent:
+            if n > level_per_agent:
+                levels_assigned = random.sample(levels_assigned, level_per_agent)
+        total_list.append(sorted(levels_assigned))
     if agent_idx >= len(total_list):
         return None
     return total_list[agent_idx]
@@ -134,7 +139,8 @@ if __name__ == '__main__':
             ## using multi-threading to collect memory ##
             agents = []
             for i in range(c.num_worker):
-                level_sampled = random.sample(c.train_level_list, c.num_level_per_agent)
+                level_sampled = sample_levels(c.train_level_list, c.num_worker, i,
+                                              level_per_agent=c.num_level_per_agent if step != 0 else None)
                 env = SBEnvironmentWrapper(reward_type=c.reward_type, speed=c.simulation_speed)
                 agent = c.multiagent(id=i + 1, dqn=network, level_list=level_sampled, replay_memory=memory, env=env,
                                      level_selection_function=LevelSelectionSchema.RepeatPlay(
