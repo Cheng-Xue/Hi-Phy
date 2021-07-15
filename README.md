@@ -42,6 +42,7 @@ link of the paper: https://arxiv.org/abs/2106.09692
    1. [The Game Environment](#Env)
    2. [Symbolic Representation Data Structure](#SymbolicRepresentation)
    3. [Communication Protocols](#Protocol)
+7. [Human Player Data](#HumanPlayerData)
 ---
 
 ---
@@ -838,4 +839,18 @@ simple description. Detailed documentation in progress):
 	</tbody>
 
 </table>
+
+## 7.Human Player Data 
+<a name="HumanPlayerData"/></a>
+The human player data on Hi-Phy is given in ```human_player_data.zip```. This includes summarized data from 20 players. Each .csv file is for a player. This includes summarized data for 20 players. Each .csv file is for a player and the following are the columns.
+1.	levelIndex: The index assigned to the task 
+2.	levelName: The name of the task 
+3.	attempts: Number of attempts taken to solve the task
+4.	total_thinking_time: Total thinking time taken to solve the task
+5.	time_breakdown: Thinking time taken for each attempt (e.g. {1: 27, 2: 14}: Player has taken two attempts to solve the task. Time taken in the first attempt is 27 seconds and time taken for the second attempt is 14 seconds)
+6.	hierachy_level: The level of the hierarchy 
+7.	capability: The index of the capability
+8.	h_c: The index of the hierarchy and the capability (e.g. 2_3: hierarchy level 2, capability 3) 
+
+
 
