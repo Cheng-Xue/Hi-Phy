@@ -83,7 +83,7 @@ work alongside people, and 3) currently fall short in reinforcement learning.**
     3.5: Understanding how to perform non-greedy actions.
     3.6: Understanding structural weak points/stability.
     3.7: Understanding how to clear a path towards the goal.
-    3.8: Understanding how to perform action with adequate timing.
+    3.8: Understanding how to perform actions with adequate timing.
     3.9: Understanding how to use tools.
 
 Please refer to the paper for more details how and why we attributed the capabilities in this way.
@@ -107,7 +107,7 @@ Based on the proposed hierarchy, we develop Hi-Phy benchmark in Angry Birds. Hi-
 <img src="tasks/example_tasks/videos/3.5.5.gif" width="2000"/> | 3.5: Understanding how to perform non-greedy actions. Greedy action is to destroy the highest number of pigs in a single bird shot. If the two pigs resting on the circular block is destroyed, then the circle will roll down and block the entrance to reach the below pig. Hence, the below pig is needed to be destroyed first and then the upper two pigs.
 <img src="tasks/example_tasks/videos/3.6.5.gif" width="2000"/> | 3.6: Understanding structural weak points/stability. The bird is needed to be shot at the weak point of the structure to break the stability and destroy the pigs. Shooting elsewhere does not destroy the pigs with a single bird.
 <img src="tasks/example_tasks/videos/3.7.5.gif" width="2000"/> | 3.7: Understanding how to clear a path towards the goal. First, the rectangle block is needed to be positioned correctly to open the path for the circular block to reach the pig. Then the circular block is needed to be rolled to destroy the pig.
-<img src="tasks/example_tasks/videos/3.8.1.gif" width="2000"/> | 3.8: Understanding how to perform action with adequate timing. First, the two circular objects are needed to be rolled to the ramp. Then, after the first circle passes the prop and before the second circle reaches the prop, the prop needs to be destroyed to fall the second circle onto the lower pig.
+<img src="tasks/example_tasks/videos/3.8.1.gif" width="2000"/> | 3.8: Understanding how to perform actions with adequate timing. First, the two circular objects are needed to be rolled to the ramp. Then, after the first circle passes the prop and before the second circle reaches the prop, the prop needs to be destroyed to fall the second circle onto the lower pig.
 <img src="tasks/example_tasks/videos/3.9.4.gif" width="2000"/> | 3.9: Understanding how to use tools. The blue bird (considered as a tool) splits into three other birds when it is tapped in the flight as opposed to the red bird without such ability. The blue bird is needed to be tapped at the correct position to reach the two separated pigs that cannot be destroyed with a single bird.
 
 Sceenshots of the 65 task templates are shown below. x.y.z represents the z<sup>th</sup> task template of the y<sup>th</sup> capability of the x<sup>th</sup> hierarchy level .
