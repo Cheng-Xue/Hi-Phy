@@ -842,7 +842,7 @@ simple description. Detailed documentation in progress):
 
 ## 7.Human Player Data 
 <a name="HumanPlayerData"/></a>
-The human player data on Hi-Phy is given in ```human_player_data.zip```. This includes summarized data from 20 players. Each .csv file is for a player. This includes summarized data for 20 players. Each .csv file is for a player and the following are the columns.
+The human player data on Hi-Phy is given in ```human_player_data.zip```. This includes summarized data for 20 players. Each .csv file is for a player and the following are the columns.
 1.	levelIndex: The index assigned to the task 
 2.	levelName: The name of the task 
 3.	attempts: Number of attempts taken to solve the task
